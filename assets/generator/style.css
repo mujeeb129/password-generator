@@ -1,0 +1,130 @@
+body{
+	font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding-top: 100px;
+	border-width: 3px;
+	border-color: black;
+}
+
+.row{
+	padding-bottom: 10px;
+}
+
+.custom-checkbox{
+	background: white;
+}
+
+.center{
+	align-items: center;
+	align-self: center;
+}
+
+.center-total{
+	align-items: center;
+	align-self: center;
+}
+
+h1{
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+input[type=submit]{
+	height: 40px;
+	width: 200px;
+	background-color: white;
+	border-radius: 0;
+	box-shadow: 0;
+	color: #212529;
+	border-width: 1px;
+	border-color: #212529;
+
+}
+
+.Lcontainer{
+	display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.Lcontainer input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  align-items: center;
+}
+
+.checkmark {
+  align-self: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+
+.Lcontainer:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.Lcontainer input:checked ~ .checkmark {
+  background-color: #212529;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.Lcontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.Lcontainer .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.submit-btn{
+	justify-content: center;
+}
+
+input#passwords{
+  border: none;
+  color: transparent;
+  text-shadow: 0 0 0 black;
+  font-size: 30px;
+  text-align: center;
+}
+
+#password:focus{
+  outline: none;
+}
